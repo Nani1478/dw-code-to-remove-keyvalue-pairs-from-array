@@ -1,4 +1,8 @@
-   //removibg single key value pair to use mask we have to import dw values //
+  %dw 2.0
+import * from dw::util::Values
+output application/json
+--- 
+  //removibg single key value pair to use mask we have to import dw values //
 /*((payload mask  "SSN" with "") mask "dob" with "") map (
        data: $ mapObject ((value, key, index) -> 
        if (key ~= "address")
